@@ -20,8 +20,21 @@ function createGrid(num) {
     }
 }
 
+function changeDimensions() {
+    let sideLength = prompt("Enter the side length: ");
+    if (sideLength > 100) {
+        alert("Please enter something below 100 so the computer can load it easily!")
+        return;
+    }
+    clear();
+    createGrid(sideLength);
+    addDrawing();
+}
+
+function addDrawing() {
+    const box = document.querySelectorAll(".box");
+    box.forEach((box) => box.addEventListener("mouseover", (event) => event.target.classList.add("hovered")));
+}
+
 createGrid(16);
-
-const box = document.querySelectorAll(".box");
-
-box.forEach((box) => box.addEventListener("mouseover", (event) => event.target.classList.add("hovered")));
+addDrawing();
