@@ -23,7 +23,10 @@ function createGrid(num) {
 function changeDimensions() {
     let sideLength = prompt("Enter the side length: ");
     if (sideLength > 100) {
-        alert("Please enter something below 100 so the computer can load it easily!")
+        alert("Please enter something only up to 100 so the computer can load the canvas easily!");
+        return;
+    } else if (typeof(sideLength) !== "number") {
+        alert("You have not entered a valid number.");
         return;
     }
     clear();
