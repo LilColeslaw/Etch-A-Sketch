@@ -7,17 +7,21 @@ body {
     aspect-ratio: 1 / 1;
     height: 100vh;
     margin: 0 auto;
-    gap: 3px;
+    background-color: aliceblue;
 }
 
 .container .row {
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
-    gap: 3px;
+
 }
 
 .row div {
     flex: 1 1 auto;
-    background-color: red;
+
+}
+
+.hovered {
+    background-color: saddlebrown;
 }
