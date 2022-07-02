@@ -43,7 +43,15 @@ function changeDimensions() {
 
 function addDrawing() {
     const box = document.querySelectorAll(".box");
-    box.forEach((box) => box.addEventListener("mouseover", (event) => event.target.style.backgroundColor = rgbRandom()));
+    box.forEach((box) => box.addEventListener("mouseover", bgColorRandom));
+}
+
+function bgColorRandom(event) {
+    event.target.style.backgroundColor = rgbRandom();
+}
+function removeDrawing() {
+    const box = document.querySelectorAll(".box");
+    box.forEach((box) => box.removeEventListener("mouseover", bgColorRandom));
 }
 
 createGrid(16);
