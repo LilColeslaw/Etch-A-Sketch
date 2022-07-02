@@ -6,7 +6,6 @@ body {
     flex-direction: column;
     aspect-ratio: 1 / 1;
     height: 100vh;
-    margin: 0 auto;
     background-color: aliceblue;
 }
 
@@ -19,9 +18,22 @@ body {
 
 .row div {
     flex: 1 1 auto;
-
 }
 
 .hovered {
     background-color: saddlebrown;
+}
+
+.holds {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.specs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
 }
