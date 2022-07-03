@@ -47,7 +47,7 @@ function changeDimensions() {
 
 function addDrawing() {
     const box = document.querySelectorAll(".box");
-    box.forEach((box) => box.addEventListener("mouseover", bgColorRandom));
+    box.forEach((box) => box.addEventListener("mouseenter", bgColorRandom));
     amDrawing = true;
 }
 
@@ -57,7 +57,7 @@ function bgColorRandom(event) {
 
 function removeDrawing() {
     const box = document.querySelectorAll(".box");
-    box.forEach((box) => box.removeEventListener("mouseover", bgColorRandom));
+    box.forEach((box) => box.removeEventListener("mouseenter", bgColorRandom));
     amDrawing = false;
 }
 
