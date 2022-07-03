@@ -95,4 +95,4 @@ function toggleDrawing() {//toggles the drawing
 
 createGrid(16);
 setCanvasColor();
-alert("Press the space-bar to start drawing!");
+alert("Press the space-bar to start and stop drawing!");
