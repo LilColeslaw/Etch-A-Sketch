@@ -6,7 +6,6 @@ body {
     flex-direction: column;
     aspect-ratio: 1 / 1;
     height: 100vh;
-    background-color: aliceblue;
 }
 
 .container .row {
