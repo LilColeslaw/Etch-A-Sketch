@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 let amDrawing = false;
 const body = document.querySelector("body");
+const changeDimensionsButton = document.querySelector(".dimension-change");
 
 body.addEventListener("keypress", (event) => {if (event.key === " ") toggleDrawing();});
 
@@ -35,14 +36,17 @@ function changeDimensions() {
     let sideLength = prompt("Enter the side length: ");
     if (sideLength % 1 !== 0) {
         alert("You have not entered a valid number.");
+        changeDimensionsButton.blur();
         return;
     } else if (sideLength > 100) {
         alert("Please enter something only up to 100 so the computer can load the canvas easily!");
+        changeDimensionsButton.blur();
         return;
     }
     clear();
     createGrid(sideLength);
     addDrawing();
+    changeDimensionsButton.blur();
 }
 
 function addDrawing() {
