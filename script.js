@@ -1,4 +1,8 @@
 const container = document.querySelector(".container");
+let amDrawing = false;
+const body = document.querySelector("body");
+
+body.addEventListener("keypress", (event) => {if (event.key === " ") toggleDrawing();});
 
 function rgbRandom() {
     let r = Math.floor(Math.random() * 256);
@@ -44,14 +48,21 @@ function changeDimensions() {
 function addDrawing() {
     const box = document.querySelectorAll(".box");
     box.forEach((box) => box.addEventListener("mouseover", bgColorRandom));
+    amDrawing = true;
 }
 
 function bgColorRandom(event) {
     event.target.style.backgroundColor = rgbRandom();
 }
+
 function removeDrawing() {
     const box = document.querySelectorAll(".box");
     box.forEach((box) => box.removeEventListener("mouseover", bgColorRandom));
+    amDrawing = false;
+}
+
+function toggleDrawing() {
+    amDrawing ? removeDrawing() : addDrawing();
 }
 
 createGrid(16);
