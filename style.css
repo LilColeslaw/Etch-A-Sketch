@@ -33,13 +33,12 @@ body {
 .specs {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     flex: 1 1 auto;
 }
 
 button {
     border-width: 0;
-    border-radius: 10px;
+    border-radius: 0;
     padding: 10px;
+    flex: 1 1 auto;
 }
